@@ -1,0 +1,113 @@
+body {
+    background-color: rgba(128, 128, 128, 0.336);
+}
+
+.calculator {
+    background-color: #0462a0;
+    margin: auto;
+    margin-top: 40px;
+    padding: 10px;
+    padding-bottom: 50px;
+    width: 350px;
+    align-content: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.display {
+    width: auto;
+    text-align: end;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+
+}
+
+.display-area {
+    background-color: rgb(181, 191, 181);
+    font-size: 2.5rem;
+    font-family: 'alarm clock', sans-serif;
+    border-style: inset;
+    height: 50px;
+
+}
+
+.branding {
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.branding>h3 {
+    justify-content: flex-start;
+}
+
+.branding>h1 {
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+
+button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+    width: 79px;
+    height: 50px;
+    cursor: pointer;
+    font-size: small;
+    border-radius: 5px;
+    font-family: "Michroma", sans-serif;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.281)
+}
+
+button:active {
+    box-shadow: 0 2px #000000;
+    transform: translateY(2px);
+}
+
+.function-button {
+    background-color: #c82139;
+    color: white;
+    font-weight: bold;
+}
+
+.all-buttons {
+    display: flex;
+    border-style: solid;
+    border-color: #012842;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.number-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.operator-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    flex: 0 1 auto;
+    flex-direction: column;
+}
+
+#equals {
+    flex: 1;
+}
+
+.number-button,
+.operator-button {
+    background-color: white;
+}
