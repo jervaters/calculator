@@ -75,7 +75,8 @@ button:active {
     transform: translateY(2px);
 }
 
-.function-button {
+.function-button,
+.operator-button {
     background-color: #c82139;
     color: white;
     font-weight: bold;
@@ -107,7 +108,6 @@ button:active {
     flex: 1;
 }
 
-.number-button,
-.operator-button {
+.number-button {
     background-color: white;
 }
