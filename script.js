@@ -2,6 +2,15 @@
 let screenInput = ''
 let screen = document.querySelector('.display-area')
 
+
+function decimalCheck() {
+    if (screen.textContent.includes('.')) {
+        document.querySelector("#decimal").disabled = true
+    } else {
+        document.querySelector("#decimal").disabled = false
+    }
+}
+
 let calculator = {
     '_display': '',
     get display() {
@@ -10,6 +19,7 @@ let calculator = {
     set display(newValue) {
         this._display = newValue;
         screen.textContent = newValue;
+        decimalCheck();
     },
     'previousValue': 0,
     'waitingForSecondOperand': false,
@@ -42,7 +52,7 @@ operatorButtons.forEach(operatorButton => {
 function handleOperatorButtons(e) {
     //This is when I've entered number(s) and then an operator.
     if (calculator.operator != null) {
-        result = performCalculation(calculator.previousValue, parseFloat(calculator.display), calculator.operator)
+        result = operate(calculator.previousValue, parseFloat(calculator.display), calculator.operator)
         calculator.display = result
         calculator.previousValue = result
     } else {
@@ -53,7 +63,7 @@ function handleOperatorButtons(e) {
 
 }
 
-function performCalculation(previousValue, currentValue, operator) {
+function operate(previousValue, currentValue, operator) {
     if (operator == 'plus') {
         return previousValue + currentValue
     }
@@ -100,5 +110,19 @@ function clear() {
 
 //memory functionality 
 
+//keyboard input
 
+document.addEventListener("keyup", (e) => {
+    //document.querySelector("#one").click()
+    if (e.key == 1) document.querySelector("#one").click();
+    if (e.key == 2) document.querySelector("#two").click();
+    if (e.key == 3) document.querySelector("#three").click();
+    if (e.key == 4) document.querySelector("#four").click();
+    if (e.key == 5) document.querySelector("#five").click();
+    if (e.key == 6) document.querySelector("#six").click();
+    if (e.key == 7) document.querySelector("#seven").click();
+    if (e.key == 8) document.querySelector("#eight").click();
+    if (e.key == 9) document.querySelector("#nine").click();
+
+})
 
