@@ -102,13 +102,7 @@ function clear() {
 }
 
 
-//select all function buttons and feed ids to function 
-
-//function for function button input
-
-//secondary functions for each button 
-
-//memory functionality 
+//TODO: memory functionality 
 
 //keyboard input
 
